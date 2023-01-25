@@ -1,0 +1,69 @@
+@import "../base/color.scss";
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 4rem;
+    align-items: center;
+    color: $primary-text;
+    padding-block: 1rem;
+
+    .logoContainer {
+        display: flex;
+        align-items: flex-start;
+
+        .logoTitle {
+            font-weight: 700;
+            margin-left: 7px;
+        }
+    }
+
+    .todo{
+        display: none;
+    }
+
+    .subMenuContainer {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+        align-items: center;
+
+        .select {
+            background-color: transparent;
+            border: none;
+            color: $primary-text;
+        }
+
+        .signUpButton {
+            border: none;
+            background-color: $primary-text;
+            padding: 8px 10px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1007px) and (min-width: 800px) {
+.headerContainer{
+    margin-inline: 2rem;
+}
+}
+@media only screen and (max-width: 799px) {
+
+    .headerContainer{
+        margin-inline: 1rem;
+
+        .todo{
+            display: block;
+        }
+    
+        .subMenuContainer{
+            display: none;
+        }
+
+    }
+   
+
+}
